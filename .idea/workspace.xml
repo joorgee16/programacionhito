@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85a58bf0-cb53-464f-b68f-04c77e679d7b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/empresa/programacionhito/Client.java" afterDir="false" />
+    <list default="true" id="85a58bf0-cb53-464f-b68f-04c77e679d7b" name="Changes" comment="Proyecto Final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/empresa/programacionhito/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/empresa/programacionhito/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/empresa/programacionhito/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/empresa/programacionhito/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/empresa/programacionhito/MongoDBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/empresa/programacionhito/MongoDBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/empresa/programacionhito/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/empresa/programacionhito/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/empresa/programacionhito/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/empresa/programacionhito/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,18 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "joorgee16"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;joorgee16&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/joorgee16/programacionhito.git",
-    "accountId": "8312beb5-0734-4328-b849-c6a973ce95c7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/joorgee16/programacionhito.git&quot;,
+    &quot;accountId&quot;: &quot;8312beb5-0734-4328-b849-c6a973ce95c7&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -101,11 +94,25 @@
       <workItem from="1716369897871" duration="3456000" />
       <workItem from="1716448345000" duration="1801000" />
       <workItem from="1716450221859" duration="56000" />
-      <workItem from="1716459032660" duration="4086000" />
+      <workItem from="1716459032660" duration="4993000" />
+      <workItem from="1716464823076" duration="801000" />
     </task>
+    <task id="LOCAL-00001" summary="Proyecto Final">
+      <option name="closed" value="true" />
+      <created>1716464137420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716464137420</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Proyecto Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proyecto Final" />
   </component>
 </project>

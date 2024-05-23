@@ -49,7 +49,7 @@ public class HelloController {
     public void initialize() {
         try {
             this.database = MongoDBConnection.connect();
-            showAlert("Success", "Connected to the database successfully.");
+            showAlert("Éxito", "Has conectado a la base de datos de manera correcta.");
 
             idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
             nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -57,7 +57,7 @@ public class HelloController {
 
             tableView.setItems(clientList);
         } catch (Exception e) {
-            showAlert("Error", "Failed to connect to the database: " + e.getMessage());
+            showAlert("Error", "Conexión a la base de datos fallida: " + e.getMessage());
         }
     }
 
@@ -71,9 +71,9 @@ public class HelloController {
                     .append("nombre", nameField.getText())
                     .append("facturacion", Double.parseDouble(billingField.getText()));
             createRecord(database, "clientes", document);
-            showAlert("Success", "Record created successfully.");
+            showAlert("Exito", "Registro creado satisfactoriamente.");
         } catch (Exception e) {
-            showAlert("Error", "Failed to create record: " + e.getMessage());
+            showAlert("Error", "Creación de registro fallido: " + e.getMessage());
         }
     }
 
@@ -88,9 +88,9 @@ public class HelloController {
                 Client client = new Client(id, name, billing);
                 clientList.add(client);
             }
-            showAlert("Success", "Records read successfully.");
+            showAlert("Éxito", "El registro se ha leido satisfactoriamente.");
         } catch (Exception e) {
-            showAlert("Error", "Failed to read records: " + e.getMessage());
+            showAlert("Error", "Lectura de registro fallido: " + e.getMessage());
         }
     }
 
@@ -104,9 +104,9 @@ public class HelloController {
             Document update = new Document("nombre", nameField.getText())
                     .append("facturacion", Double.parseDouble(billingField.getText()));
             updateRecord(database, "clientes", query, update);
-            showAlert("Success", "Record updated successfully.");
+            showAlert("Éxito", "Registro actualizado satisfactoriamente.");
         } catch (Exception e) {
-            showAlert("Error", "Failed to update record: " + e.getMessage());
+            showAlert("Error", "Actualización de registro fallido: " + e.getMessage());
         }
     }
 
@@ -114,14 +114,14 @@ public class HelloController {
     private void handleDelete() {
         try {
             if (idField.getText().isEmpty()) {
-                showAlert("Error", "ID field cannot be empty for delete operation.");
+                showAlert("Error", "El campo ID no puede estar vacio.");
                 return;
             }
             Document query = new Document("_id", idField.getText());
             deleteRecord(database, "clientes", query);
-            showAlert("Success", "Record deleted successfully.");
+            showAlert("Éxito", "Registros eliminados correctamente.");
         } catch (Exception e) {
-            showAlert("Error", "Failed to delete record: " + e.getMessage());
+            showAlert("Error", "Fallo al eliminar los registros: " + e.getMessage());
         }
     }
 
@@ -136,14 +136,14 @@ public class HelloController {
     public void updateRecord(MongoDatabase database, String collectionName, Document query, Document update) {
         UpdateResult result = database.getCollection(collectionName).updateOne(query, new Document("$set", update));
         if (result.getMatchedCount() == 0) {
-            throw new RuntimeException("No matching record found to update.");
+            throw new RuntimeException("No se han encontrado registros para actualizar.");
         }
     }
 
     public void deleteRecord(MongoDatabase database, String collectionName, Document query) {
         DeleteResult result = database.getCollection(collectionName).deleteOne(query);
         if (result.getDeletedCount() == 0) {
-            throw new RuntimeException("No matching record found to delete.");
+            throw new RuntimeException("No se han encontrado registros para eliminar.");
         }
     }
 
@@ -156,21 +156,21 @@ public class HelloController {
 
     private boolean validateInput() {
         if (idField.getText().isEmpty()) {
-            showAlert("Error", "ID field cannot be empty.");
+            showAlert("Error", "El campo ID no puede estar vacio.");
             return false;
         }
         if (nameField.getText().isEmpty()) {
-            showAlert("Error", "Name field cannot be empty.");
+            showAlert("Error", "El campo nombre no puede estar vacio.");
             return false;
         }
         if (billingField.getText().isEmpty()) {
-            showAlert("Error", "Billing field cannot be empty.");
+            showAlert("Error", "El campo facturación no puede estar vacio.");
             return false;
         }
         try {
             Double.parseDouble(billingField.getText());
         } catch (NumberFormatException e) {
-            showAlert("Error", "Billing field must be a valid number.");
+            showAlert("Error", "El campo facturación debe ser un número valido.");
             return false;
         }
         return true;

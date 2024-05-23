@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.empresa.programacionhito.HelloController" stylesheets="@style.css">
-    <TextField fx:id="idField" layoutX="50" layoutY="50" promptText="ID"/>
-    <TextField fx:id="nameField" layoutX="50" layoutY="100" promptText="Nombre"/>
-    <TextField fx:id="billingField" layoutX="50" layoutY="150" promptText="Facturación"/>
-    <Button text="Crear" layoutX="50" layoutY="200" onAction="#handleCreate"/>
-    <Button text="Leer" layoutX="120" layoutY="200" onAction="#handleRead"/>
-    <Button text="Actualizar" layoutX="190" layoutY="200" onAction="#handleUpdate"/>
-    <Button text="Eliminar" layoutX="280" layoutY="200" onAction="#handleDelete"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.empresa.programacionhito.HelloController" prefWidth="600" prefHeight="400">
+    <TextField fx:id="idField" layoutX="50" layoutY="50" promptText="ID" prefWidth="500"/>
+    <TextField fx:id="nameField" layoutX="50" layoutY="100" promptText="Nombre" prefWidth="500"/>
+    <TextField fx:id="billingField" layoutX="50" layoutY="150" promptText="Facturación" prefWidth="500"/>
+    <Button text="Crear" layoutX="50" layoutY="200" onAction="#handleCreate" prefWidth="100"/>
+    <Button text="Leer" layoutX="160" layoutY="200" onAction="#handleRead" prefWidth="100"/>
+    <Button text="Actualizar" layoutX="270" layoutY="200" onAction="#handleUpdate" prefWidth="100"/>
+    <Button text="Eliminar" layoutX="380" layoutY="200" onAction="#handleDelete" prefWidth="100"/>
 
-    <TableView fx:id="tableView" layoutX="50" layoutY="250" prefWidth="500" prefHeight="200">
+    <TableView fx:id="tableView" layoutX="50" layoutY="250" prefWidth="500" prefHeight="100">
         <columns>
             <TableColumn fx:id="idColumn" text="ID" prefWidth="150"/>
-            <TableColumn fx:id="nameColumn" text="Nombre" prefWidth="175"/>
-            <TableColumn fx:id="billingColumn" text="Facturación" prefWidth="175"/>
+            <TableColumn fx:id="nameColumn" text="Nombre" prefWidth="200"/>
+            <TableColumn fx:id="billingColumn" text="Facturación" prefWidth="150"/>
         </columns>
     </TableView>
 </AnchorPane>
